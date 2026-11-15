@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<flash-mode>
+  <project>ot11</project>
+  <dagent>DA_BR.bin</dagent>
+  <scatter>../scatter.xml</scatter>
+  <build_version>alps-mp-s0.mp1.tc10sp2-hq.pre18_huaqin.s0mp1.tb8781p1.64.ssdev_P9</build_version>
+  <build_time>2023-09-11 18:11:07</build_time>
+  <version>1.0</version>
+  <contact>Shuai.Zhang</contact>
+</flash-mode>

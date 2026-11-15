@@ -1,0 +1,114 @@
+[
+  {
+    "Partition": "spmfw",
+    "Start": "0x5800000",
+    "Capacity": "0x100000",
+    "File": "images/spmfw.img",
+    "Bytes": 15200
+  },
+  {
+    "Partition": "dpm1",
+    "Start": "0x5900000",
+    "Capacity": "0x100000",
+    "File": "images/dpm.img",
+    "Bytes": 148784
+  },
+  {
+    "Partition": "scp1",
+    "Start": "0x5a00000",
+    "Capacity": "0x200000",
+    "File": "images/scp.img",
+    "Bytes": 1395648
+  },
+  {
+    "Partition": "sspm1",
+    "Start": "0x5c00000",
+    "Capacity": "0x100000",
+    "File": "images/sspm.img",
+    "Bytes": 722752
+  },
+  {
+    "Partition": "mcupm1",
+    "Start": "0x5d00000",
+    "Capacity": "0x100000",
+    "File": "images/mcupm.img",
+    "Bytes": 129888
+  },
+  {
+    "Partition": "gz1",
+    "Start": "0x5e00000",
+    "Capacity": "0x1000000",
+    "File": "images/gz.img",
+    "Bytes": 2899504
+  },
+  {
+    "Partition": "lk1",
+    "Start": "0x6e00000",
+    "Capacity": "0x600000",
+    "File": "images/lk.img",
+    "Bytes": 6291456
+  },
+  {
+    "Partition": "tee1",
+    "Start": "0x7600000",
+    "Capacity": "0x200000",
+    "File": "images/tee.img",
+    "Bytes": 2097152
+  },
+  {
+    "Partition": "dtbo",
+    "Start": "0x7800000",
+    "Capacity": "0x800000",
+    "File": "images/dtbo.img",
+    "Bytes": 99136
+  },
+  {
+    "Partition": "vbmeta",
+    "Start": "0x8000000",
+    "Capacity": "0x10000",
+    "File": "images/vbmeta.img",
+    "Bytes": 7680
+  },
+  {
+    "Partition": "tzar",
+    "Start": "0x8010000",
+    "Capacity": "0x400000",
+    "File": "images/tzar.img",
+    "Bytes": 3215696
+  },
+  {
+    "Partition": "pi_img",
+    "Start": "0x19b80000",
+    "Capacity": "0x100000",
+    "File": "images/pi_img.img",
+    "Bytes": 16864
+  },
+  {
+    "Partition": "boot",
+    "Start": "0x1ec80000",
+    "Capacity": "0x4000000",
+    "File": "images/boot.img",
+    "Bytes": 67108864
+  },
+  {
+    "Partition": "recovery",
+    "Start": "0x22c80000",
+    "Capacity": "0x5000000",
+    "File": "images/recovery.img",
+    "Bytes": 83886080
+  },
+  {
+    "Partition": "vendor_boot",
+    "Start": "0x27c80000",
+    "Capacity": "0x4000000",
+    "File": "images/vendor_boot.img",
+    "Bytes": 67108864
+  },
+  {
+    "Partition": "vbmeta_system",
+    "Start": "0x2d480000",
+    "Capacity": "0x10000",
+    "File": "images/vbmeta_system.img",
+    "Bytes": 3904
+  }
+]
