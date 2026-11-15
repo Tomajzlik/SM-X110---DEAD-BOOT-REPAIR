@@ -1,15 +1,32 @@
-# SM-X110 U6 / BIT 6 — untested Download Mode recovery candidate
+# 🔴 USE AT YOUR OWN RISK
 
-**EXPERIMENTAL. NOT HARDWARE-TESTED. NO GUARANTEE OF BOOT OR DOWNLOAD MODE RECOVERY. SM-X110 ONLY, ANDROID 15 X110XXS6CYI3, BIT 6. NOT X115, BIT 7/9 OR A16.**
+> [!CAUTION]
+> **Recovery may erase data or cause loss/changes of the original serial number (SN) and MAC addresses.**
+>
+> X110 is Wi-Fi-only. Wi-Fi and Bluetooth do not rely on IMEI, but cannot be guaranteed after NV data damage.
+>
+> **SM-X110 ONLY — BIT 6 / U6. No other model or revision.**
+>
+> EXPERIMENTAL — NOT TESTED ON HARDWARE. SUCCESS IS NOT GUARANTEED.
 
-This reduced profile was derived from the user-supplied X110XXS6CYI3 INS service set. The user's earlier successful X110 repair involved the full original set, not this reduced selection. Images are unchanged. Addresses come from the supplied UFS layout and have not been checked against your tablet's GPT.
+## Quick guide
 
-Selected images: spmfw, dpm1, scp1, sspm1, mcupm1, gz1, lk1, tee1, dtbo, vbmeta, tzar, pi_img, boot, recovery, vendor_boot and vbmeta_system. BOOT_ONLY_CONTENTS.json lists exact addresses and sizes. Kernel/recovery images form part of this boot set; it is not a complete Android installation. Its intended purpose is recovering access to Download Mode, not installing a fully working OS.
+1. Download the experimental ZIP from Releases and extract the entire archive.
 
-Preloader, GPT/PIT, super, userdata, efuse, grd_fw, NV/EFS/persist and donor identity files are excluded and not selected for writing. Missing efs.img, sec_efs.img, persist.img and vbmeta_vendor.img references in the original XML are disabled, not substituted. This profile cannot repair a damaged preloader. Other missing or incompatible boot components may also prevent recovery.
+2. Install needed VC++ and USB drivers from 03_DRIVERS. For the MTK driver, right-click INSTALOVAT_MTK.cmd → Run as administrator.
 
-Before writing, use Read Back to save your boot areas and NV/EFS, and compare actual GPT addresses. Stop on any mismatch. Recovery can cause data loss or invalid/changed serial number and MAC addresses; original identity cannot be guaranteed without your own backups. X110 is a Wi-Fi model, not an LTE model with normal cellular calls/IMEI. This package cannot restore factory identity.
+3. Run 02_SP_FLASH_TOOL/SPFlashToolV6.exe.
 
-Extract the entire ZIP to a short local path such as D:/X110_RECOVERY. Run 02_SP_FLASH_TOOL/SPFlashToolV6.exe. Download-XML: 01_SPFT_RECOVERY/download_agent/flash.xml. Authentication: 01_SPFT_RECOVERY/download_agent/auth_sv5.auth. Use Download Only with 16 selected existing files and populated Location fields. Never use Format All, Firmware Upgrade, Nand Erase or add preloader/efuse/NV writes. Write only after GPT verification. Stop on signature/layout errors; earlier partitions may already have been written. Download OK is not proof of boot. Once Download Mode works, use matching full official SM-X110 BIT 6 firmware in Odin; that firmware is not included here.
+4. Download-XML: select 01_SPFT_RECOVERY/download_agent/flash.xml. Authentication File: select auth_sv5.auth in that same folder.
 
-The included signed MediaTek cdc-acm.inf driver is old and may be blocked by Windows Memory integrity. Prefer a compatible vendor driver. Installation requires administrator rights. If Memory integrity is manually disabled temporarily for repair, remove the driver and re-enable protection afterwards. Do not disable Defender, Secure Boot or signature enforcement. VC++ x86/x64 and Samsung USB installers are in 03_DRIVERS; install only when needed.
+5. Choose Download Only. Check that 16 rows are selected and Location paths are populated. Do not change other options.
+
+6. Click Download and connect the tablet by USB. If it is not detected, hold Power + Volume Down until vibration, then release. Do not unplug during writing.
+
+7. After Download OK, unplug USB. To enter Download Mode, hold both volume buttons and reconnect USB; confirm any prompt with a short Volume Up press.
+
+**STOP on any error; do not repeat the same write. If Download Mode does not appear, do not start another write.**
+
+Once Download Mode returns, you can flash matching full official SM-X110 BIT 6 firmware with Odin. Full firmware is not included in this small package.
+
+[Technical details and driver troubleshooting](TECHNICAL_NOTES_EN.md)
