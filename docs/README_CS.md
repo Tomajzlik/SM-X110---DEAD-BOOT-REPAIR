@@ -11,7 +11,7 @@
 
 ## Stručný návod
 
-1. Stáhni experimentální ZIP z Releases a celý jej rozbal.
+1. Stáhni všechny díly .zip.001 až .zip.004 do stejné složky. V 7-Zip otevři .zip.001 a celý balíček rozbal.
 
 2. Ve složce 03_DRIVERS nainstaluj potřebné VC++ a USB ovladače. MTK ovladač: klikni pravým na INSTALOVAT_MTK.cmd → Spustit jako správce.
 
@@ -27,6 +27,6 @@
 
 **Při jakékoli chybě STOP — stejný zápis neopakuj. Když se Download Mode neobjeví, další zápis nespouštěj.**
 
-Po návratu Download Mode můžeš nahrát správný originální firmware SM-X110 BIT 6 přes Odin. Kompletní firmware není v tomto malém balíčku.
+Po návratu Download Mode rozbal ZIP z 05_OFFICIAL_A15. Spusť Odin z 04_ODIN, přiřaď BL → BL, AP → AP a CSC → CSC (ne HOME_CSC). CP nech prázdné. Re-Partition a Nand Erase musí být vypnuté, PIT prázdné. Klikni Start a počkej na PASS. Tato obnova smaže uživatelská data.
 
 [Technické podrobnosti a problémy s ovladači](TECHNICAL_NOTES_CS.md)

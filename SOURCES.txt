@@ -8,3 +8,6 @@ Samsung and Microsoft installers and MediaTek catalogue signature verified valid
 SP Flash Tool V6 6.2216 and Odin 3.14.4: existing user-supplied tools; no claim of official Samsung distribution for Odin.
 Firmware images and DA/auth: original user-provided packages, see language guides. No A16 experimental firmware or Magisk included.
 This is a personal offline backup. Third-party software remains subject to its original terms.
+
+
+Complete kit: official Samsung FUS INS Android 15 BIT 6, X110XXS6CYI3 / X110ODM6CYI3. All four Odin TAR.MD5 checks passed. All 16 recovery image SHA-256 hashes match the corresponding decompressed official BL/AP images. Existing 16-image UFS profile is unchanged. No hardware test has been performed. Full firmware is supplied separately for Odin; SP Flash Tool does not write super, userdata, preloader, GPT, efuse or NV/EFS. X110 is Wi-Fi-only: no CP file.

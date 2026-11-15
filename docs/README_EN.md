@@ -11,7 +11,7 @@
 
 ## Quick guide
 
-1. Download the experimental ZIP from Releases and extract the entire archive.
+1. Download all parts .zip.001 through .zip.004 into the same folder. Open .zip.001 with 7-Zip and extract the entire package.
 
 2. Install needed VC++ and USB drivers from 03_DRIVERS. For the MTK driver, right-click INSTALOVAT_MTK.cmd → Run as administrator.
 
@@ -27,6 +27,6 @@
 
 **STOP on any error; do not repeat the same write. If Download Mode does not appear, do not start another write.**
 
-Once Download Mode returns, you can flash matching full official SM-X110 BIT 6 firmware with Odin. Full firmware is not included in this small package.
+Once Download Mode returns, extract the ZIP in 05_OFFICIAL_A15. Run Odin from 04_ODIN, assign BL → BL, AP → AP and CSC → CSC (not HOME_CSC). Leave CP empty. Keep Re-Partition and Nand Erase off and PIT empty. Click Start and wait for PASS. This recovery erases user data.
 
 [Technical details and driver troubleshooting](TECHNICAL_NOTES_EN.md)
